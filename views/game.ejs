@@ -1,0 +1,29 @@
+<% include header %>
+
+
+<div class="ui text container">
+    <h1 class="ui inverted header"  id="margin" style="font-family: Arial">
+        Choisissez  votre  nom  de  Ninja!
+    </h1>
+    <form method="post" action="/ninjify">
+        <div class="ui container" id="margin">
+            <select name="buzzwords" id="gender-select" class="ui multiple selection dropdown">
+                <option value=""></option>
+                <% for(let i=0; i< buzzwordGroups.length;i++ ) { %>
+                <option value="<%= buzzwordGroups[i]._id %>"><%= buzzwordGroups[i].buzzword %></option>
+                <% } %>
+            </select>
+            <div class="ui button vider" style="transform: translate(0px,7px)">
+                Vider
+            </div>
+        </div>
+        <button style="margin-top: 40px" type="submit" class="ui huge primary button" name="submit" id="submit">
+            Continuer<i class="right arrow icon"></i>
+        </button>
+    </form>
+</div>
+</div>
+
+
+<% include footer %>
+

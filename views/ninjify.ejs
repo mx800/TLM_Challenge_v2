@@ -1,0 +1,23 @@
+<% include header %>
+
+<div class="ui text container">
+    <h1 class="ui inverted header" style="color: #ac0013" id="margin" style="font-family: Arial">
+        Votre super nom de  Ninja est!
+    </h1><h3 class="header  container" >
+        <% for(let i=0; i< buzzwords.length;i++ ) { %>
+        <% let name= (buzzwords[i].name).split(':') %><%= name[0] %>
+        <% } %></h3>
+
+    <h1 style="margin-top: 100px" class="ui inverted header">Description</h1>
+    <% for(let i=0; i< buzzwords.length;i++ ) { %>
+    <h3 class="header"><%= buzzwords[i].name %></h3>
+    <% } %>
+    <div class="ui container" id="margin">
+
+    </div>
+</div>
+</div>
+
+
+
+<% include footer %>
