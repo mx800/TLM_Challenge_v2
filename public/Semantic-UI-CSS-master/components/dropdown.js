@@ -258,7 +258,7 @@ $.fn.dropdown = function(parameters) {
             ? query
             : module.get.query()
           ;
-          module.verbose('Searching for controller', query);
+          module.verbose('Searching for api', query);
           if(module.has.minCharacters(query)) {
             module.filter(query);
           }
@@ -3681,7 +3681,7 @@ $.fn.dropdown.settings = {
   selectOnKeydown        : true,       // Whether selection should occur automatically when keyboard shortcuts used
   minCharacters          : 0,          // Minimum characters required to trigger API call
 
-  filterRemoteData       : false,      // Whether API results should be filtered after being returned for controller term
+  filterRemoteData       : false,      // Whether API results should be filtered after being returned for api term
   saveRemoteData         : true,       // Whether remote name/value pairs should be stored in sessionStorage to allow remote data to be restored on page refresh
 
   throttle               : 200,        // How long to wait after last user input to search remotely
@@ -3782,7 +3782,7 @@ $.fn.dropdown.settings = {
     value           : 'value'
   },
 
-  // property names for remote controller
+  // property names for remote api
   fields: {
     remoteValues : 'results',  // grouping for api results
     values       : 'values',   // grouping for all dropdown values

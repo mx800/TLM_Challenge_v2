@@ -268,7 +268,7 @@ $.fn.visibility = function(parameters) {
         should: {
           trackChanges: function() {
             if(methodInvoked) {
-              module.debug('One time controller, no need to bind events');
+              module.debug('One time api, no need to bind events');
               return false;
             }
             module.debug('Callbacks being attached');

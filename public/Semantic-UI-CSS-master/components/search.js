@@ -321,9 +321,9 @@ $.fn.search = function(parameters) {
             }
           }
           else {
-            // controller shortcuts
+            // api shortcuts
             if(keyCode == keys.enter) {
-              module.verbose('Enter key pressed, executing controller');
+              module.verbose('Enter key pressed, executing api');
               module.query();
               module.set.buttonPressed();
               $prompt.one('keyup', module.remove.buttonFocus);
@@ -755,7 +755,7 @@ $.fn.search = function(parameters) {
               cache = $module.data(metadata.cache)
             ;
             if(settings.cache) {
-              module.verbose('Checking cache for generated html for controller', name);
+              module.verbose('Checking cache for generated html for api', name);
               return (typeof cache == 'object') && (cache[name] !== undefined)
                 ? cache[name]
                 : false
@@ -1236,7 +1236,7 @@ $.fn.search.settings = {
   // object to search
   source            : false,
 
-  // Whether search should controller current term on focus
+  // Whether search should api current term on focus
   searchOnFocus     : true,
 
   // fields to search

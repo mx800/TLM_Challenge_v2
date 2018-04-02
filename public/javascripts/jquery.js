@@ -7490,7 +7490,7 @@ jQuery.fn.extend({
 });
 
 //Serialize an array of form elements or a set of
-//key/values into a controller string
+//key/values into a api string
 jQuery.param = function( a, traditional ) {
   var prefix,
     s = [],

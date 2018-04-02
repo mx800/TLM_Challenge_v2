@@ -30,7 +30,6 @@ $('.code').on('click', function() {
 
 //Pour envoyer le code konami
 $('#submit').on('click', function() {
-    console.log(cheatcode)
     if(cpt>3) {
         switch (cheatcode) {
             case 4:
