@@ -9,5 +9,6 @@ Installer les dépendances
 npm install
 
 Lancer le serveur sur localhost:8080
-Lanver la commande 
+
+Lancer la commande 
 node bin/www
