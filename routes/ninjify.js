@@ -6,9 +6,9 @@ const async = require('async');
 let BuzzwordGroup = require('../models/buzzword');
 
 router.post('/', (req, res,next)=>{
-    if(req.body.buzzwords === undefined || req.body.buzzwords ==''){
-        res.redirect('/game')
-    }
+  //  if(req.body.buzzwords === undefined || req.body.buzzwords ==''){
+  //      res.redirect('/game') //N'est plus utilisé, pour information seulement
+  //  }
     let param = req.body.buzzwords;
     let buzzwordCollection = []
     if(param[0].length==1){

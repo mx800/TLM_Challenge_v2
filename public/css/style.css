@@ -1067,3 +1067,6 @@ h2 {
     margin-right: -50%;
     transform: translate(-50%, -50%)
 }
+.hide{
+	visibility: hidden;
+}

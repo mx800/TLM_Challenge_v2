@@ -19,6 +19,7 @@ if(location.pathname=='/game'){
 //Pour inscrire le code
 var cpt = 0;
 var cheatcode=0;
+var error = false;
 $('.code').on('click', function() {
     if(cpt <4 ) {
         var htmlString = "<i style='font-size:36px;color: black;margin-top:5px' class='" + ($(this).attr('id')) + "'></i>";
@@ -57,6 +58,8 @@ $('#submit').on('click', function() {
         cheatcode = 0;
         cpt = 0;
         $('#cheatcodezone').empty();
+    }else if(location.pathname == '/konami'){
+       errorMessage( $('.message'),'Vous devez avoir quatre saisit!')
     }
 });
 
@@ -70,4 +73,29 @@ var boom = function(){
 var redirect = function(){
     window.location.href = window.location.href
 }
+
+//Function form error message
+function errorMessage(from, text){
+   if(error ==false){
+        from.removeClass('hide');
+        $('#errorMessage').html(text)
+        error = true;
+    }
+}
+
+//Closing error message
+$('.message .close').on('click', function() {
+    $('.message').addClass('hide');
+    error = false;
+});
+
+//Check selection for error message
+$('form').submit(function() {
+    let value = $('#gender-select').dropdown('get value')
+    if ( value[0] == ''){
+        errorMessage( $('.message'),'Vous devez avoir au moins une sélection!')
+        return false;//This will stop the form from being submitted.
+    }
+    return true;
+});
 
