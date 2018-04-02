@@ -8,5 +8,6 @@ Lignes de commandes
 Installer les dépendances
 npm install
 
-Lancer le serveur avec hot reload sur localhost:8080
-node run server
+Lancer le serveur sur localhost:8080
+Lanver la commande 
+node bin/www
