@@ -8,6 +8,13 @@ $('.vider').on('click', function() {
 
 });
 
+//Menu sélection selected
+if(location.pathname=='/game'){
+    $('#game').addClass('active')
+}else if(location.pathname=='/konami' || location.pathname=='/secret' ){
+    $('#konami').addClass('active')
+}
+
 
 //Pour inscrire le code
 var cpt = 0;
@@ -45,7 +52,7 @@ $('#submit').on('click', function() {
                 window.location = "http://solutionstlm.com/"
                 break;
             case 8:
-
+                window.location.href = '/secret';
                 break;
         }
         cheatcode = 0;
