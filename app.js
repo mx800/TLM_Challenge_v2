@@ -23,7 +23,8 @@ const app = express();
 //-------------------------------------
 //Connection BD
 //-------------------------------------
-mongoose.connect("mongodb://mx800:90269026aD@ds231229.mlab.com:31229/buzzwords");
+var connectMongo = (process.env.MONGODB_URI);
+mongoose.connect(connectMongo);
 const db = mongoose.connection;
 //Vérifit les erreurs
 db.on('error',console.error.bind(console,'connection error'));
@@ -57,7 +58,8 @@ app.use('/secret', secretRouter);
 // catch 404 and forward to error handler
 //-------------------------------------
 app.use(function(req, res, next) {
-  next(createError(404));
+    res.redirect('/');
+  //  next(createError(404)); //Error message
 });
 
 //-------------------------------------
